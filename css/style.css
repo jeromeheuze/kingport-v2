@@ -3,7 +3,8 @@ html, body {
   background: #fff;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-wrap: break-word; }
 
 .centered {
   text-align: center; }
@@ -14,6 +15,8 @@ header {
   width: 100%;
   height: 88px;
   z-index: 10; }
+  header.header-cont .branding a {
+    text-decoration: none; }
   header.header-cont .branding h1 {
     text-transform: uppercase;
     color: #fff;
@@ -21,14 +24,21 @@ header {
     font-size: 1em;
     padding-top: 32px;
     margin: 0; }
+  @media only screen and (max-width: 767px) {
+    header.header-cont .menu {
+      position: absolute;
+      top: 72px;
+      background-color: #111;
+      padding-bottom: 20px;
+      text-align: center;
+      font-size: .7em; } }
   header.header-cont .menu ul {
     list-style-type: none;
-    padding: 0;
+    padding: 30px 0 0 0;
     margin: 0; }
     header.header-cont .menu ul li {
       display: inline-block;
-      margin-right: 15px;
-      padding-top: 32px; }
+      margin-right: 15px; }
       header.header-cont .menu ul li:last-child {
         margin-right: 0; }
       header.header-cont .menu ul li a {
@@ -37,6 +47,9 @@ header {
         color: #fff;
         font-weight: 300;
         font-size: 0.8em; }
+        @media only screen and (min-width: 768px) {
+          header.header-cont .menu ul li a {
+            font-size: 0.7em; } }
         header.header-cont .menu ul li a:link, header.header-cont .menu ul li a:visited {
           color: #D6DBD9; }
         header.header-cont .menu ul li a:hover {
@@ -63,12 +76,18 @@ header {
           text-decoration: none;
           font-weight: 400;
           font-size: 0.9em; }
+          @media only screen and (max-width: 1024px) {
+            header.header-cont .call-widget ul li a {
+              padding-left: 20px; } }
           header.header-cont .call-widget ul li a:link, header.header-cont .call-widget ul li a:visited {
             color: #040303; }
           header.header-cont .call-widget ul li a:hover {
             color: #131B23; }
           header.header-cont .call-widget ul li a:active {
             color: #131B23; }
+        @media only screen and (max-width: 1024px) {
+          header.header-cont .call-widget ul li.tri {
+            display: none; } }
         header.header-cont .call-widget ul li .triangle {
           width: 0;
           height: 0;
@@ -83,8 +102,14 @@ header {
 .banner {
   display: block;
   padding-top: 150px;
-  height: 580px;
   color: #fff; }
+  .banner.full {
+    padding-bottom: 40px; }
+  .banner.short {
+    padding-bottom: 20px; }
+  .banner.desk {
+    background: url("/img/isaac-smith-6EnTPvPPL6I-unsplash-1980.jpg") 50% 50% no-repeat;
+    background-size: cover; }
   .banner.bluegradient {
     background: black;
     background: -moz-linear-gradient(45deg, black 0%, #301087 51%, #3b0cd4 100%);
@@ -94,18 +119,37 @@ header {
     background: -ms-linear-gradient(45deg, black 0%, #301087 51%, #3b0cd4 100%);
     background: linear-gradient(45deg, black 0%, #301087 51%, #3b0cd4 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#3b0cd4', GradientType=1 ); }
-  .banner .line1 {
-    font-size: 4em;
+  .banner h1.line1, .banner .line1 {
+    font-size: 4rem;
     margin-bottom: 0; }
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      .banner h1.line1, .banner .line1 {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 767px) {
+      .banner h1.line1, .banner .line1 {
+        font-size: 2rem; } }
   .banner .line2 {
-    font-size: 4em;
+    font-size: 4rem;
     margin: 0; }
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      .banner .line2 {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 767px) {
+      .banner .line2 {
+        font-size: 2rem; } }
   .banner .line3 {
-    font-size: 4em;
+    font-size: 4rem;
     margin-top: 0; }
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      .banner .line3 {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 767px) {
+      .banner .line3 {
+        font-size: 2rem; } }
 
 main {
-  display: block; }
+  display: block;
+  /* About page */ }
   main .block {
     padding: 2em 0; }
   main #Contact {
@@ -113,11 +157,242 @@ main {
     main #Contact .frm-text {
       line-height: 1rem;
       margin-top: 0.7rem; }
+    main #Contact #contact-form {
+      position: relative; }
+      main #Contact #contact-form .invalid-feedback {
+        position: absolute;
+        bottom: -14px; }
+    main #Contact .msgSent {
+      display: none; }
+      main #Contact .msgSent p {
+        margin-bottom: 0; }
   main #ConsultingPractice .block-img-text {
     width: 40%;
     margin: 0 auto; }
+    @media only screen and (max-width: 992px) {
+      main #ConsultingPractice .block-img-text {
+        width: 80%; } }
     main #ConsultingPractice .block-img-text .b-img {
       padding: 5em 0 2em; }
+  main #Services {
+    position: relative; }
+    main #Services .services-header {
+      background: #D6DBD9;
+      margin-bottom: 2em;
+      padding: 2em 0; }
+    main #Services .logo-astm {
+      position: absolute;
+      bottom: 3em; }
+      main #Services .logo-astm img {
+        height: 150px; }
+    main #Services .block-row {
+      margin: 3rem 0; }
+    main #Services .block-header {
+      font-weight: 600;
+      font-size: 1.3em;
+      padding-right: 2em;
+      color: #707070; }
+      main #Services .block-header.vcentered {
+        padding-top: 4rem; }
+    main #Services .grey-box {
+      background-color: #eaeaea;
+      border: 1px solid #ccc;
+      font-size: 0.95em;
+      -webkit-box-shadow: 0 1px 7px #cccccc;
+      -moz-box-shadow: 0 1px 7px #cccccc;
+      box-shadow: 0 1px 7px #cccccc; }
+      main #Services .grey-box.grid-2x2-box {
+        height: 130px;
+        margin: 5px 5px 15px 5px;
+        padding: 15px; }
+        @media only screen and (min-width: 768px) {
+          main #Services .grey-box.grid-2x2-box {
+            height: 230px; } }
+      main #Services .grey-box.grid-1x2-box {
+        padding: 15px;
+        font-size: 0.80em; }
+        main #Services .grey-box.grid-1x2-box h6 {
+          overflow-wrap: break-word; }
+    main #Services .bottom-services-cta {
+      width: 80%;
+      margin: 120px auto 20px auto;
+      font-size: 0.8em;
+      text-align: center; }
+      @media only screen and (min-width: 768px) {
+        main #Services .bottom-services-cta {
+          width: 60%; } }
+      main #Services .bottom-services-cta p {
+        line-height: 20px; }
+        main #Services .bottom-services-cta p img {
+          vertical-align: middle;
+          margin-bottom: 3px;
+          width: 20px;
+          height: 20px; }
+  main #Testimonials {
+    background: #eaeaea; }
+    main #Testimonials .testimonials-carousel {
+      margin: 2rem; }
+      main #Testimonials .testimonials-carousel .testimonials-item .quote {
+        font-size: 1.8em;
+        font-weight: 300;
+        font-style: italic;
+        color: #000; }
+      main #Testimonials .testimonials-carousel .testimonials-item .quote-who {
+        position: relative;
+        margin-left: 35%; }
+        main #Testimonials .testimonials-carousel .testimonials-item .quote-who .who {
+          position: absolute;
+          display: inline-block;
+          height: 129px;
+          left: 160px;
+          top: 34px; }
+          main #Testimonials .testimonials-carousel .testimonials-item .quote-who .who p {
+            font-weight: 600;
+            font-size: 0.9em;
+            color: #111; }
+        main #Testimonials .testimonials-carousel .testimonials-item .quote-who .img {
+          width: 129px;
+          height: 129px;
+          display: inline-block; }
+          main #Testimonials .testimonials-carousel .testimonials-item .quote-who .img.astm {
+            background: url("/img/astm.png") 0 0 no-repeat;
+            background-size: cover; }
+          main #Testimonials .testimonials-carousel .testimonials-item .quote-who .img.sdva {
+            background: url("/img/sdva_400x400.png") 0 0 no-repeat;
+            background-size: cover; }
+          main #Testimonials .testimonials-carousel .testimonials-item .quote-who .img.sodexo {
+            background: url("/img/sodexo-logo.png") 0 0 no-repeat;
+            background-size: cover; }
+          main #Testimonials .testimonials-carousel .testimonials-item .quote-who .img.ibew {
+            background: url("/img/ibew.png") 0 0 no-repeat;
+            background-size: cover; }
+          main #Testimonials .testimonials-carousel .testimonials-item .quote-who .img.mtm {
+            background: url("/img/mtm.png") 0 0 no-repeat;
+            background-size: cover; }
+  main #DidYouKnow {
+    margin-bottom: 2em; }
+    main #DidYouKnow .dyk_h2 {
+      margin-bottom: 2em; }
+    main #DidYouKnow .dyk_img {
+      display: block;
+      width: 100%;
+      height: 180px; }
+      main #DidYouKnow .dyk_img.wen {
+        background: url("/img/dyk_01.png") 0 0 no-repeat;
+        background-size: cover; }
+      main #DidYouKnow .dyk_img.twb {
+        background: url("/img/dyk_02.png") 0 0 no-repeat;
+        background-size: cover; }
+      main #DidYouKnow .dyk_img.wfen {
+        background: url("/img/dyk_03.png") 0 0 no-repeat;
+        background-size: cover; }
+    main #DidYouKnow h3 {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 1.4em; }
+    main #DidYouKnow p {
+      margin-top: 1em; }
+  main #Aboutkingport .about-text {
+    padding: 3rem 0; }
+  main #Aboutus .about-team {
+    padding: 3rem 0; }
+    main #Aboutus .about-team a {
+      text-decoration: none; }
+    main #Aboutus .about-team .att-cont {
+      height: 350px;
+      padding: 10px; }
+      main #Aboutus .about-team .att-cont:hover, main #Aboutus .about-team .att-cont:active {
+        -webkit-box-shadow: 0 1px 7px #cccccc;
+        -moz-box-shadow: 0 1px 7px #cccccc;
+        box-shadow: 0 1px 7px #cccccc; }
+      main #Aboutus .about-team .att-cont .att-img {
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin: 1em auto; }
+        main #Aboutus .about-team .att-cont .att-img.lee {
+          background: url("/img/lee_150x150.png") 0 0 no-repeat;
+          background-size: contain; }
+        main #Aboutus .about-team .att-cont .att-img.daryl {
+          background: url("/img/daryl_150x150.png") 0 0 no-repeat;
+          background-size: contain; }
+        main #Aboutus .about-team .att-cont .att-img.natalie {
+          background: url("/img/natalie_150x150.png") 0 0 no-repeat;
+          background-size: contain; }
+        main #Aboutus .about-team .att-cont .att-img.kelley {
+          background: url("/img/kelley_150x150.png") 0 0 no-repeat;
+          background-size: contain; }
+        main #Aboutus .about-team .att-cont .att-img.greg {
+          background: url("/img/greg_150x150.png") 0 0 no-repeat;
+          background-size: contain; }
+        main #Aboutus .about-team .att-cont .att-img.jerome {
+          background: url("/img/jerome_150x150.png") 0 0 no-repeat;
+          background-size: contain; }
+      main #Aboutus .about-team .att-cont h2 {
+        padding-top: 10px;
+        color: #cf404d;
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: 0; }
+      main #Aboutus .about-team .att-cont h3 {
+        padding-top: 5px;
+        color: #111;
+        font-size: 1em;
+        text-align: center; }
+      main #Aboutus .about-team .att-cont p {
+        padding-top: 10px;
+        color: #333;
+        text-align: center;
+        font-size: 0.8em; }
+  main #Employees .att-cont {
+    padding: 10px; }
+    main #Employees .att-cont .att-img {
+      width: 150px;
+      height: 150px;
+      display: block;
+      margin: 1em auto; }
+      main #Employees .att-cont .att-img.lee {
+        background: url("/img/lee_150x150.png") 0 0 no-repeat;
+        background-size: contain; }
+      main #Employees .att-cont .att-img.daryl {
+        background: url("/img/daryl_150x150.png") 0 0 no-repeat;
+        background-size: contain; }
+      main #Employees .att-cont .att-img.natalie {
+        background: url("/img/natalie_150x150.png") 0 0 no-repeat;
+        background-size: contain; }
+      main #Employees .att-cont .att-img.kelley {
+        background: url("/img/kelley_150x150.png") 0 0 no-repeat;
+        background-size: contain; }
+      main #Employees .att-cont .att-img.greg {
+        background: url("/img/greg_150x150.png") 0 0 no-repeat;
+        background-size: contain; }
+      main #Employees .att-cont .att-img.jerome {
+        background: url("/img/jerome_150x150.png") 0 0 no-repeat;
+        background-size: contain; }
+    main #Employees .att-cont h2 {
+      padding-top: 10px;
+      color: #cf404d;
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 0; }
+    main #Employees .att-cont h3 {
+      padding-top: 5px;
+      color: #111;
+      font-size: 1em;
+      text-align: center; }
+    main #Employees .att-cont ul {
+      list-style-type: none;
+      margin: 10px;
+      padding: 0; }
+      main #Employees .att-cont ul li {
+        display: inline-block;
+        margin: 0;
+        padding: 10px; }
+        main #Employees .att-cont ul li img {
+          width: 32px;
+          height: 32px; }
+  main #Employees .about-employee p {
+    font-size: 1.1em; }
   main footer {
     background-color: #D6DBD9;
     padding: 1em 0; }
