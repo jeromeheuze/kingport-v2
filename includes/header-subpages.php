@@ -15,7 +15,7 @@
                 <div class="col-6 col-sm-4 col-md-3 call-widget">
                     <ul>
                         <li class="tri"><div class="triangle"></div></li>
-                        <li><a href="tel:+18054484200">Call Us +1 (805)448-4200</a></li>
+                        <li><a href="callto:+18054484200">Call Us +1 (805)448-4200</a></li>
                     </ul>
                 </div>
             </div>

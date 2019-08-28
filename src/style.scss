@@ -133,16 +133,6 @@ header {
     background: url("/img/isaac-smith-6EnTPvPPL6I-unsplash-1980.jpg") 50% 50% no-repeat;
     background-size: cover;
   }
-  &.bluegradient {
-    background: rgba(0,0,0,1);
-    background: -moz-linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(48,16,135,1) 51%, rgba(59,12,212,1) 100%);
-    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(51%, rgba(48,16,135,1)), color-stop(100%, rgba(59,12,212,1)));
-    background: -webkit-linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(48,16,135,1) 51%, rgba(59,12,212,1) 100%);
-    background: -o-linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(48,16,135,1) 51%, rgba(59,12,212,1) 100%);
-    background: -ms-linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(48,16,135,1) 51%, rgba(59,12,212,1) 100%);
-    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(48,16,135,1) 51%, rgba(59,12,212,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#3b0cd4', GradientType=1 );
-  }
   h1.line1, .line1 {
     font-size: 4rem;
     margin-bottom: 0;
